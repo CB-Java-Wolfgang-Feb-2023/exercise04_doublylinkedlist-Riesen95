@@ -1,41 +1,27 @@
 public interface MyListInterface {
+    void addFirst(int item); // Fügt ein Element am Anfang der Liste hinzu
 
-    void addFirst(int item);
+    void addLast(int item); // Fügt ein Element am Ende der Liste hinzu
 
-    void addLast(int item);
+    void addAtIndex(int index, int item); // Fügt ein Element an einer bestimmten Position in der Liste hinzu
 
-    void addAtIndex(int index, int item);
+    Node removeFirst(); // Entfernt das erste Element aus der Liste und gibt es zurück
 
-    void addElementAtRandomIndex(int value);
+    Node removeLast(); // Entfernt das letzte Element aus der Liste und gibt es zurück
 
-    Node removeFirst();
+    Node removeAtIndex(int index); // Entfernt das Element an einer bestimmten Position in der Liste und gibt es zurück
 
-    Node removeLast();
+    int getSize(); // Gibt die Anzahl der Elemente in der Liste zurück
 
-    Node removeAtIndex(int index);
+    boolean isEmpty(); // Überprüft, ob die Liste leer ist
 
-    int getSize();
+    void printList(); // Gibt die Elemente der Liste in der Reihenfolge aus
 
-    boolean isEmpty();
+    void printListBackwards(); // Gibt die Elemente der Liste in umgekehrter Reihenfolge aus
 
-    void printList();
+    int get(int index); // Gibt den Wert des Elements an einer bestimmten Position in der Liste zurück
 
-    void printListBackwards();
+    void clear(); // Entfernt alle Elemente aus der Liste
 
-    int get(int index) throws IllegalArgumentException;
-
-    void removeDuplicates();
-
-    void reverseList();
-
-    DoublyLinkedListCustom copyList();
-
-    void clear();
-
-    boolean insertAfter(int key, int data);
-
-
-    // Removes first occurrence of element val and returns true if this was successful.
-    // In error case (e.g. if the given element is not found) return false.
-    Node deleteKey(int key);
+    void updateValueAt(int index, int newValue); // Aktualisiert den Wert eines Elements an einer bestimmten Position in der Liste
 }
